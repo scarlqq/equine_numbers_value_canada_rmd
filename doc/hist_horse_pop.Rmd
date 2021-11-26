@@ -1,6 +1,6 @@
 ---
 title: "Historical horse population in Canada"
-output: github_document
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -55,7 +55,7 @@ industry after the Great Depression and the Second World War. An interesting fol
 
 Next we look at the range of the number horses for each provinces at any time point between 1940 - 1972:
 
-```{r max horse table}
+```{r max horse table, message = FALSE, warning = FALSE}
 max_horses <- horse_pop %>% 
   select(GEO, Value) %>% 
   rename(Province = GEO) %>% 
